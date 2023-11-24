@@ -10,7 +10,7 @@
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
-    <!-- <iframe src="https://3dwarehouse.sketchup.com/embed/007f0f50-00da-4e1d-b24d-83c74b6bf0bc?token=K7L-e_M6DEg=&binaryName=s21" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="580" height="326" allowfullscreen></iframe> -->
+   
         <section id="app">
 
         <div class="dropdown" >
@@ -43,13 +43,19 @@
                 </li>
             </ul>
         </div>
-        <div class="container" >
-            <img v-for="constR in ConstrToCalc" :src="constR.img" alt="">
-            <div v-for="constR in ConstrToCalc">
-                <p v-bind:title="info">{{constR.description}}</p>
+        <div class="container"  > 
+            <div v-for="constR in ConstrToCalc" style="display: flex;">         
+                <img :src="constR.img" alt="">
+                <iframe src="https://3dwarehouse.sketchup.com/embed/ddf3698a-b405-493b-a0f5-ff8889db4d14?token=GleNZuCrSpA=&binaryName=s21"  scrolling="no" allowfullscreen>
+                </iframe>
             </div>
-         <hr v-for="constR in ConstrToCalc">
+            <hr v-for="constR in ConstrToCalc">
+
+                <p v-for="constR in ConstrToCalc" v-bind:title="info">{{constR.description}}</p>
+            
+            <hr v-for="constR in ConstrToCalc">
             <span v-for="constR in ConstrToCalc">{{constR.specification}}</span>
+            <hr v-for="constR in ConstrToCalc">
             <table class="table table-striped  table-hover" v-if ="tableConstr != null" >
 
                 <tr>

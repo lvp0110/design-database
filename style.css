@@ -41,10 +41,24 @@ img {
     width: 140px;
     border: solid 1px darkgray;
     border-radius: 10%;
-    
+    padding: 5px;
+    margin:10px ;
 }
 img:hover{
     width: 340px;
     position: absolute;
     transition: all 0.7s;
 }
+iframe {
+    width: 140px;
+    border: solid 1px darkgray;
+    border-radius: 10%;
+    padding: 5px;
+    margin: 10px ;
+}
+/* iframe:hover{
+    width: 340px;
+    height: 340px;
+    position: absolute;
+    transition: all 0.7s;
+} */
